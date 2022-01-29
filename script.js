@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
       
         console.log(this);
-        var text = $(this).siblings(".description").val(); // taken the change from the sibling html description attribute
+        var text = $(this).siblings(".description").val(); 
         var time = $(this).parent().attr("id"); 
 
     
@@ -36,16 +36,15 @@ if (blockHour < currentHour) {
  else if (blockHour === currentHour) {
     $(this).removeClass("past");
     $(this).addClass("present");
-    $(this).removeClass("future");
-
-}
+    $(this).removeClass("future"); }
 
 
 else {
     $(this).removeClass("past");
 $(this).removeClass("present");
- $(this).addClass("future");
-} 
-    }
+ $(this).addClass("future");} 
+}
+
+hourTracker();
 
 })
