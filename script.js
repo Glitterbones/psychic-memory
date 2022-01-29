@@ -22,23 +22,21 @@ $(document).ready(function () {
     $("#hour15 .description").val(localStorage.getItem("hour15"));
     $("#hour16 .description").val(localStorage.getItem("hour16"));
     $("#hour17 .description").val(localStorage.getItem("hour17"));
-   
-    function hourTracker() 
+
+    function hourTracker (){
 
     var currentHour = moment().hour();
 
-})
 
 if (blockHour < currentHour) {
     $(this).addClass("past");
     $(this).removeClass("present");
+    $(this).removeClass("future"); }
 
-
- }
-
-else if (blockHour === currentHour) {
+ else if (blockHour === currentHour) {
     $(this).removeClass("past");
     $(this).addClass("present");
+    $(this).removeClass("future");
 
 }
 
@@ -46,7 +44,8 @@ else if (blockHour === currentHour) {
 else {
     $(this).removeClass("past");
 $(this).removeClass("present");
-
-
-
+ $(this).addClass("future");
 } 
+    }
+
+})
