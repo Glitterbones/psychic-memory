@@ -24,7 +24,27 @@ $(document).ready(function () {
     $("#hour17 .description").val(localStorage.getItem("hour17"));
    
     function hourTracker() 
-    
+
     var currentHour = moment().hour();
 
 })
+
+if (blockHour < currentHour) {
+    $(this).addClass("past");
+
+
+ }
+
+else if (blockHour === currentHour) {
+    $(this).removeClass("past");
+
+}
+
+
+else {
+    $(this).removeClass("past");
+
+
+
+
+} 
